@@ -83,7 +83,7 @@ Jenkins has a large number of plugins available, and the installation process is
 
 #### Creating the Admin User
 
-Once the plugins is installed, one is prompted to create an admin user. Filled in the required information and clicked "Save and Finish".
+After installing the plugins, one is prompted to create an admin account by entering the necessary information and clicking on "Save and Finish".
 
 #### Conclusion
 
