@@ -34,7 +34,7 @@ Deliverables:
 
 ### Notes
 
-#### Inventory.text
+#### Inventory.txt
 
 Specifies the host(s) for Ansible to manage and is also used in the execution of Ansible playbook. It has hostname and variables specific to the host (private key required to ssh into host).
 
