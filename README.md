@@ -87,6 +87,6 @@ Once the plugins is installed, one is prompted to create an admin user. Filled i
 
 #### Conclusion
 
-By following these steps, anyone should be able to start using Jenkins to automate builds and deployments.
+These steps enable the creation of a Jenkins server via an Ansible Playbook, allowing the use of Jenkins for automating builds and deployments.
 
 ---
