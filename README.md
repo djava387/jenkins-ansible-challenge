@@ -55,7 +55,7 @@ ansible-playbook -i inventory.txt jenkins-config.yml
 
 ---
 
-After installing Jenkins, you will need to perform a few additional steps to get it up and running.
+After installing Jenkins, a few additional steps need to be performed to get it up and running.
 
 Accessing Jenkins
 
