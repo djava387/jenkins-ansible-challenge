@@ -18,7 +18,7 @@
 
     - name: add the jenkins repo
       apt_repository:
-        url: https://pkg.jenkins.io/debian-stable/jenkins.repo
+        repo: deb http://pkg.jenkins.io/debian-stable binary/
         state: present
 
     - name: apt get-update
@@ -28,7 +28,13 @@
         force_apt_get: true
 
     - name: install java
-      shell: amazon-linux-extras install java-openjdk11 -y
+      become: yes
+      apt:
+        name: "{{packages}}"
+        state: present
+      vars:
+        packages:
+          - openjdk-11-jdk
 
     - name: install jenkins
       apt:
@@ -40,4 +46,3 @@
       ansible.builtin.systemd:
         enabled: yes
         name: jenkins
-        state: started
