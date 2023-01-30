@@ -51,17 +51,20 @@ ansible-playbook -i inventory.txt jenkins-config.yml
 
 ```
 
+---
+
 #### Post-installation Jenkins Setup Steps
 
 ---
 
 After installing Jenkins, a few additional steps need to be performed to get it up and running.
 
-Accessing Jenkins
+#### Accessing Jenkins
 
 To access Jenkins, navigation to http://<jenkins public ip>:8080 in a web browser is required, replacing <jenkins public ip> with the public IP address of Jenkins instance.
 
-Unlocking Jenkins
+#### Unlocking Jenkins
+
 When first accessing Jenkins, one is prompted to unlock it. To do this, a step for retrieving the automatically-generated password is required.
 
 SSH into Jenkins instance.
@@ -74,15 +77,15 @@ $ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
 ```
 
-Installing Plugins
+#### Installing Plugins
 
 Jenkins has a large number of plugins available, and the installation process is simplified with the "Install suggested plugins" option.
 
-Creating the Admin User
+#### Creating the Admin User
 
 Once the plugins is installed, one is prompted to create an admin user. Filled in the required information and clicked "Save and Finish".
 
-Conclusion
+#### Conclusion
 
 By following these steps, anyone should be able to start using Jenkins to automate builds and deployments.
 
