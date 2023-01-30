@@ -1,0 +1,43 @@
+---
+- name: install jenkins
+  hosts: jenkins
+  become: yes
+  become_user: root
+  become_method: sudo
+  tasks:
+    - name: apt get-update
+      apt:
+        update_cache: true
+        cache_valid_time: 3600
+        force_apt_get: true
+
+    - name: import a key file from jenkins-ci
+      apt_key:
+        url: https://pkg.jenkins.io/debian-stable/jenkins.io.key
+        state: present
+
+    - name: add the jenkins repo
+      apt_repository:
+        url: https://pkg.jenkins.io/debian-stable/jenkins.repo
+        state: present
+
+    - name: apt get-update
+      apt:
+        update_cache: true
+        cache_valid_time: 3600
+        force_apt_get: true
+
+    - name: install java
+      shell: amazon-linux-extras install java-openjdk11 -y
+
+    - name: install jenkins
+      apt:
+        update_cache: yes
+        name: jenkins
+        state: present
+
+    - name: start jenkins
+      ansible.builtin.systemd:
+        enabled: yes
+        name: jenkins
+        state: started
