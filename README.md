@@ -1,7 +1,7 @@
 # JENKINS-> ANSIBLE CHALLENGE
 
 Setup / configure a Jenkins instance on AWS
-You already have you Ansible agent running and a EC2 machine that you can configure for Jenkins (Rename from JSHost to JenkinsHost)
+You already have your Ansible agent running and a EC2 machine that you can configure for Jenkins (Rename from JSHost to JenkinsHost)
 
 You will need to have a GitHub repo with the following files:
 
